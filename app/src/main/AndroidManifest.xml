@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.smn_aggregator">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Social Suite"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SMN_Aggregator">
+        <activity
+            android:name=".TwitterRepliesActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".ShowTwitterPost" />
+        <activity android:name=".SearchTwitterPosts" />
+        <activity
+            android:name=".Trendings"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".TwitterPostStory" />
+        <activity android:name=".TwitterPostType" />
+        <activity android:name=".FacebookPostType" />
+        <activity android:name=".InstagramPostStory" />
+        <activity android:name=".FacebookPostStory" />
+        <activity android:name=".PostActivity" />
+        <activity android:name=".FunctionsActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider140920351143345"
+            android:exported="true" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
